@@ -1,0 +1,118 @@
+<!-- <a class="latest-works inline-block absolute boxsizing btn" href="#/works" ng-click="showPortfolio = !showPortfolio">Latest Works</a> -->
+<a class="latest-works inline-block absolute boxsizing btn" href="works" ng-click="showMePortfolio()">Latest Works</a>
+
+<!-- RESUME BIG HEADING -->
+<h2 class="resume">RESUMÉ</h2>
+
+<!-- 1st COLUMN -->
+<div class="grid_4 about column boxsizing">
+  <img src="img/me-200x200.png" alt="me" class="portrait">
+
+  <h1 class="text-center">Jozef Butko</h1>
+  <h3 class="text-center">A front-end web developer</h3>
+
+  <!-- INFO -->
+  <ul>
+    <li><i class="icon-location icon"></i><a href="https://maps.google.com/maps?q=galanta" target="_blank">Galanta, Slovakia</a></li>
+    <li><i class="icon-ink-pen-streamline icon"></i><a href="mailto:jbutko@gmail.com">jbutko@gmail.com</a></li>
+    <!-- <li><i class="icon-heart icon"></i>Married</li> -->
+    <li><i class="icon-github-alt icon social"></i><a target="_blank" href="http://github.com/jbutko">github.com/jbutko</a></li>
+    <li><i class="icon-github-alt icon social"></i><a target="_blank" href="https://gist.github.com/jbutko">gist.github.com/jbutko</a></li>
+    <li><i class="icon-linkedin icon social"></i><a target="_blank" href="http://sk.linkedin.com/pub/jozef-butko/92/144/505/">sk.linkedin.com</a></li>
+    <li><i class="icon-skype icon social inline-block"></i><a href="skype:doddiblog?call">doddiblog</a></li>
+    <li><i class="icon-twitter-alt icon social"></i><a target="_blank" href="https://twitter.com/jozefbutko">@jozefbutko</a></li>
+  </ul>
+
+  <!-- ABOUT -->
+  <h2>About</h2>
+  <p class="text-justify">A dedicated front end web developer focusing on turning design mockups into vivid HTML and WordPress pages utilizing the power of jQuery. Constantly trying to learn new skills and technologies.</p>
+
+  <!-- PORTFOLIO LINK -->
+  <h2>Portfolio</h2>
+  <div><a href="http://www.jozefbutko.com/portfolio">jozefbutko.com</a></div>
+
+  <!-- MY BLOGS -->
+  <div class="blogs clearfix">
+    <h2 class="grid_50 boxsizing blogsh2">Blogs</h2>
+    <h2 class="boxsizing flright visitors">Visitors</h2>
+    <div class="grid_50 boxsizing">
+      <a target="_blank" href="http://jozefbutko.com/blog">jozefbutko.com/blog</a>
+    </div>
+    <div class="grid_50 boxsizing text-right">200</div>
+    <div class="grid_50 boxsizing">
+      <a target="_blank" href="http://doddiblog.com">doddiblog.com</a>
+    </div>
+    <div class="grid_50 boxsizing text-right">100-250</div>
+  </div>
+
+  <!-- FEATURED LINKS -->
+  <div class="featured">
+    <h2 class="grid_50 boxsizing">Featured</h2>
+    <h2 class="boxsizing flright">Month</h2><div class="clear"></div>
+    <div data-ng-repeat="element in data.featured">
+      <div class="grid_50 boxsizing">
+        <a target="_blank" href="{{element.link}}" title="{{element.titleAttr}}" class="tooltip">{{element.title}}</a>
+      </div>
+      <div class="grid_50 boxsizing text-right">{{element.month}}</div><br>
+    </div>
+  </div>
+</div><!-- 1st COLUMN END -->
+
+<!-- 2nd COLUMN -->
+<!-- WORK -->
+<div class="grid_8 column boxsizing work">
+  <h2>Professional Experience</h2>
+  <div data-ng-repeat="element in data.jobs">
+    <h3 class="inline-block">{{element.position}}, {{element.employer}}</h3>
+    <span class="flright btn">{{element.jobDate}}</span>
+    <p class="text-justify">{{element.description}}</p>
+  </div>
+</div>
+
+<!-- EDUCATION -->
+<!-- No need to loop through in AngularJS, just one school -->
+<div class="grid_8 column boxsizing education">
+  <h2>Education</h2>
+  <h3 class="inline-block">Faculty of Electrical Engineering and Information Technology, Bratislava</h3>
+  <span class="flright btn">2003 - 2010</span>
+  <p>Master's Degree at Institute of Telecommunications</p>
+</div>
+
+<!-- SKILLS & EXPERIENCES -->
+<div class="grid_4 column boxsizing">
+  <h2>Skills &amp; Experiences</h2>
+  <ul>
+    <li class="{{element.class}}" title="{{element.titleAttr}}" data-ng-repeat="element in data.skills">&#8226; {{element.title}}</li>
+  </ul>
+</div>
+
+<!-- DEVELOPMENT TOOLS -->
+<div class="grid_4 column boxsizing">
+  <h2>Development Tools</h2>
+  <ul>
+    <li class="{{element.class}}" title="{{element.titleAttr}}" data-ng-repeat="element in data.tools">&#8226; {{element.title}}</li>
+    <li>&#8226; <a target="_blank" href="http://lab.maltewassermann.com/viewport-resizer/">Viewport Resizer</a></li>
+  </ul>
+</div>
+
+<!-- LANGUAGES -->
+<div class="misc">
+  <div class="grid_8 column boxsizing">
+    <h2>Languages</h2>
+    <div class="grid_50 boxsizing">English</div><!--
+  --><div class="grid_50 boxsizing text-right"><i class="icon-circle icon"></i><i class="icon-circle icon"></i><i class="icon-circle icon"></i><i class="icon-circle icon"></i><i class="icon-circle-line icon last"></i></div><br><!--
+
+    --><div class="grid_50 boxsizing">German</div><!--
+    --><div class="grid_50 boxsizing text-right"><i class="icon-circle icon"></i><i class="icon-circle-line icon"></i><i class="icon-circle-line icon"></i><i class="icon-circle-line icon"></i><i class="icon-circle-line icon last"></i></div><br>
+  </div>
+
+  <!-- MISC -->
+  <div class="grid_8 column boxsizing flright">
+    <h2>Misc</h2>
+    <div class="grid_50 boxsizing">Years of Experience</div><!--
+    --><div class="grid_50 boxsizing text-right">{{careerYears}} {{careerYearsWord}} and {{careerMonths}} months</div><br><!--
+
+    --><div class="grid_50 boxsizing">Preferred System</div><!--
+    --><div class="grid_50 boxsizing text-right">Win</div><br>
+  </div>
+</div>

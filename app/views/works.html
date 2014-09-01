@@ -1,0 +1,82 @@
+LATESTS WORK BTN -->
+<a class="latest-works inline-block absolute boxsizing btn" href="http://localhost/portfolioNG/app/" ng-click="showMePortfolio()">Latest Works</a>
+
+<!-- RESUME BIG HEADING -->
+<h2 class="resume">RESUMÉ</h2>
+
+<!-- PORTFOLIO SECTION: Hidden on default, opened after clicking on "Latests Work" button -->
+<div class="container absolute clearfix portfolio-wrapper" >
+
+	<!-- FILTER -->
+	<ul class="tags grid_12">
+		<li class="inline-block tag"><i class="icon-tag icon"></i><a class="filter btn smooth" data-filter="all" href="#all">All</a></li>
+		<li class="inline-block tag"><i class="icon-tag icon"></i><a class="filter btn smooth" data-filter=".html" href="#html">HTML</a></li>
+		<li class="inline-block tag"><i class="icon-tag icon"></i><a class="filter btn smooth" data-filter=".css" href="#css">CSS</a></li>
+		<li class="inline-block tag"><i class="icon-tag icon"></i><a class="filter btn smooth" data-filter=".jquery" href="#jquery">jQuery</a></li>
+		<li class="inline-block tag"><i class="icon-tag icon"></i><a class="filter btn smooth" data-filter=".wp" href="#wp">WP</a></li>
+		<li class="inline-block tag"><i class="icon-tag icon"></i><a class="filter btn smooth" data-filter=".php" href="#php">PHP</a></li>
+		<li class="inline-block tag"><i class="icon-tag icon"></i><a class="filter btn smooth" data-filter=".design" href="#design">Design</a></li>
+		<li class="inline-block tag"><i class="icon-tag icon"></i><a class="filter btn smooth" data-filter=".responsive" href="#responsive">Responsive</a></li>
+		<li class="inline-block tag"><i class="icon-tag icon"></i><a class="filter btn smooth" data-filter=".tumblr" href="#tumblr">Tumblr</a></li>
+		<li class="inline-block tag"><i class="icon-tag icon"></i><a class="filter btn smooth" data-filter=".opensource" href="#opensource">Open Source</a></li>
+	</ul>
+
+	<!-- PORTFOLIO ITEMS -->
+	<div id="Container" class="clearfix">
+
+		<!-- PORTFOLIO GRID THUMBNAILS -->
+		<div class="grid_12"><div id="{{element.id}}" class="{{element.classThumb}}" data-ng-repeat="element in data.projects.projectItems">
+				<a href="{{element.href}}">
+					<img ng-src="img/{{element.mainThumbnail}}" alt="{{element.titleThumb}}">
+					<span class="text-hide">{{element.titleThumb}}</span>
+					<!-- INSIDE INFO -->
+					<div class="info smooth">
+						<h4>{{element.titleThumb}}</h4>
+						<hr>
+						<h4>{{element.type}}</h4>
+					</div>
+				</a>
+			</div></div><!-- .grid_12 END -->
+		<div class="clear"></div>
+
+		<!-- PORTFOLIO DESCRIPTION -->
+		<div class="portfolio-info-wrapper clearfix grid_12 boxsizing">
+
+			<!-- PIVODAMIAN DESCRIPTION -->
+			<div class="{{element.CSSid}} portfolio-info clearfix" data-ng-repeat="element in data.projects.projectItems">
+				<!-- LEFT SIDEBAR -->
+				<div class="portfolio-info-left boxsizing">
+					<h2 class="text-left block">{{element.titleH2}}</h2>
+					<h3>Description</h3>
+					<p data-ng-repeat="desc in data.projects.projectItems.description">{{desc}}</p>
+				</div>
+
+				<!-- RIGHT SIDEBAR -->
+				<div class="portfolio-info-right boxsizing">
+					<!-- ICONS -->
+					<ul>
+						<li><i class="icon-eye icon"></i><a target="_blank" ng-href="{{element.livePreview}}">Live Preview</a></li>
+						<li><i class="icon-github-alt icon"></i><a target="_blank" ng-href="{{element.githubLink}}">github.com</a></li>
+						<li><i class="icon-clock icon"></i>{{element.projectDate}}</li>
+						<li><i class="icon-tag icon"></i>{{element.tags}}</li>
+					</ul>
+
+					<!-- GALLERY -->
+					<div class="gallery">
+						<h3>Gallery</h3>
+						<ul>
+							<li class="grid_50">
+								<a ng-href="img/gallery/{{element.images[$index]}}" class="fullsizable">
+									<img alt="{{element.CSSid}} thumb" ng-src="img/gallery/{{element.thumbs[$index]}}">
+								</a>
+							</li>
+						</ul>
+					</div>
+
+				</div><!-- .portfolio-info-right END -->
+			</div><!-- .pivodamian END -->
+
+
+		</div><!-- .portfolio-info-wrapper END -->
+	</div><!-- #Container END -->
+</div><!-- .portfolio-wrapper END
