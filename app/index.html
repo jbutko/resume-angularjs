@@ -47,6 +47,8 @@
     <link href="http://static.tumblr.com/zsno5u0/eHRn53ur2/grid.css" rel="stylesheet" type="text/css" />
     <!-- FONT AWESOME -->
     <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <!-- AMPERSAND GOOGLE FONT -->
+    <link href='http://fonts.googleapis.com/css?family=Headland+One' rel='stylesheet' type='text/css'>
     <!-- endbuild -->
   </head>
   <body ng-app="portfolioNgApp">
@@ -64,7 +66,7 @@
 
     <!-- FOOTER -->
     <footer class="container clearfix">
-      <span class="grid_12 center text-center copyright">&copy; Copyright 2014 Jozef Butko. Made with <span class="fa fa-heart"></span> and AngularJS.</span>
+      <span class="grid_12 center text-center copyright"><span class="copy">&copy;</span> Copyright 2014 Jozef Butko. Made with <span class="fa fa-heart"></span> <span class="amp">&amp;</span> AngularJS.</span>
     </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -83,10 +85,14 @@
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
+    <!-- VENDOR PLUGINS -->
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-animate/angular-animate.js"></script >
     <script src="bower_components/angular-route/angular-route.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <!-- endbower -->

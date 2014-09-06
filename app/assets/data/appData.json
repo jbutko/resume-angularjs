@@ -171,7 +171,9 @@
                 "projectDate": "March 2014",
                 "type": "PERSONAL PROJECT",
                 "tags": [
-                    "jQuery"
+                                        "jQuery",
+                    "Open Source",
+                    "Design"
                 ],
                 "images": [],
                 "mainThumbnail": "stickynavbar.png",
@@ -425,7 +427,6 @@
         "Design",
         "Responsive",
         "Tumblr",
-        "Open",
-        "Source"
+        "Open Source"
     ]
 }

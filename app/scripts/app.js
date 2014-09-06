@@ -5,7 +5,8 @@ angular
     'ngResource',
     'ngRoute',
     'portfolioNgApp.controller',
-    'portfolioNgApp.factory'
+    'portfolioNgApp.factory',
+    'ngAnimate'
   ])
   .config(['$routeProvider', '$locationProvider',
     function ($routeProvider, $locationProvider) {
@@ -32,4 +33,10 @@ angular
             $locationProvider.html5Mode(false);
         }
 
-  }]);
+  }])
+  // Lodash global implementation
+  .constant('_', window._)
+   // use in views, ng-repeat="x in _.range(3)"
+  .run(function($rootScope) {
+    $rootScope._ = window._;
+  });

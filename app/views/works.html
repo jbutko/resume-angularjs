@@ -9,14 +9,14 @@
 
 	<!-- FILTER TAGS -->
 	<ul class="tags grid_12">
-		<li class="inline-block tag" data-ng-repeat="tag in data.tags"><i class="icon-tag icon"></i><a class="filter btn smooth" ng-href="#{{tag}}" data-ng-click="showPortfolioThumbs($event); $event.preventDefault();">{{tag}}</a></li>
+		<li class="inline-block tag" data-ng-repeat="tag in data.tags"><i class="icon-tag icon"></i><a class="filter btn smooth" ng-href="#/works/{{tag}}" data-ng-click="portfolioFilter($event); $event.preventDefault();">{{tag}}</a></li>
 	</ul>
 
 	<!-- PORTFOLIO ITEMS -->
 	<div id="Container" class="clearfix">
 
 		<!-- PORTFOLIO GRID THUMBNAILS -->
-		<div class="grid_12"><div id="{{element.CSSid}}" class="{{element.classThumb}}" data-ng-repeat="element in data.projects.projectItems" data-ng-click="showPortfolioItem($event); $event.preventDefault();" data-ng-show="element.classThumb == thumbToShow"><!--
+		<div class="grid_12"><div id="{{element.CSSid}}" class="{{element.classThumb}}" data-ng-repeat="element in filteredData" data-ng-click="showPortfolioItem($event); $event.preventDefault();"><!--
 				 --><a data-ng-href="{{element.href}}"><!--
 					 --><img ng-src="img/{{element.mainThumbnail}}" alt="{{element.titleThumb}}"><!--
 					 --><span class="text-hide">{{element.titleThumb}}</span><!--
