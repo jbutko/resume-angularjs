@@ -6,54 +6,77 @@ angular
 		function($scope, $http, FetchData, $location) {
 
 			// Check current location
-			var currentLocation = $location.path();
+			// var currentLocation = $location.path();
 
-			// if currentLocation === home then we are not on the portfolio sub page, otherwise we are on portfolio subpage
-			currentLocation === '/' ? $scope.showPortfolio = '' : $scope.showPortfolio = 'works';
-			$scope.showMePortfolio = function() {
-				// toggle showPortfolio variable on every click based on ternary operater above
-				$scope.showPortfolio = $scope.showPortfolio === '' ? 'works' : '';
-			};
+			// // if currentLocation === home then we are not on the portfolio sub page, otherwise we are on portfolio subpage
+			// currentLocation === '/' ? $scope.showPortfolio = '' : $scope.showPortfolio = 'works';
+			// $scope.showMePortfolio = function() {
+			// 	// toggle showPortfolio variable on every click based on ternary operater above
+			// 	$scope.showPortfolio = $scope.showPortfolio === '' ? 'works' : '';
+			// };
 
 			console.log($scope.data);
 
 			FetchData.getFeatured().then(function() {
 				$scope.data = {};
-				if ($scope.data.length > 1) {
-				    return;
-				}
+				// if ($scope.data.length > 1) {
+				//     return;
+				// }
 			    $scope.data = FetchData.featured;
-			    console.log($scope.data);
+			    //var obj = FetchData.featured;
+			    //console.log($scope.data);
 			});
 
 			// Since when am I into web development?
-			var careerYears = {},
-				start_date, end_date, total_months, years, yearsWord, months;
+			// call service for carrer years calculation
+			var careerYears = FetchData.careerYears();
 
-				careerYears.start_date = new Date(2012, 9, 1); //Create start date object by passing appropiate argument
-				careerYears.end_date = new Date();
-				careerYears.total_months = (careerYears.end_date.getFullYear() - careerYears.start_date.getFullYear())*12 + (careerYears.end_date.getMonth() - careerYears.start_date.getMonth());
-				careerYears.years = Math.floor(careerYears.total_months / 12);
-				careerYears.yearsWord = careerYears.years === 1 ? 'year' : 'years';
-				careerYears.months = careerYears.total_months % 12;
-
-				$scope.careerYears = careerYears.years;
-				$scope.careerYearsWord = careerYears.yearsWord;
-				$scope.careerMonths = careerYears.months;
+			// assign calculated data to $scope
+			$scope.careerYears = careerYears.years;
+			$scope.careerYearsWord = careerYears.yearsWord;
+			$scope.careerMonths = careerYears.months;
 
 	}])
 	.controller('WorksCtrl', ['$scope', '$http', 'FetchData', '$location',
 		function($scope, $http, FetchData, $location) {
 
-			var currentLocation = $location.path();
+			FetchData.getFeatured().then(function() {
+				$scope.data = {};
+				// if ($scope.data.length > 1) {
+				//     return;
+				// }
+			    $scope.data = FetchData.featured;
+			    //var obj = FetchData.featured;
+			    //console.log($scope.data);
+			});
 
-			currentLocation === '/' ? $scope.showPortfolio = '' : $scope.showPortfolio = 'works';
-			$scope.showMePortfolio = function() {
-				$scope.showPortfolio = $scope.showPortfolio === '' ? 'works' : '';
-			};
+			$scope.show = false;
 
-			$scope.data = FetchData.featured;
-			console.log($scope.data);
+			// default portfolio item which will be opened after refresh/works page open
+			$scope.itemTitleToShow = 'stickynavbar';
+			$scope.showPortfolioItem = function(event) {
+
+				//console.log(event);
+				$scope.show = !$scope.show;
+				var clickedItemID = angular.element(this);
+
+				// get the CSSid value of clicked portfolio image - corresponding description will be opened
+				$scope.itemTitleToShow = clickedItemID[0].element.CSSid;
+				//console.log($scope.itemTitleToShow);
+			}
+
+			$scope.portfolioFilter = function(event) {
+
+				var clickedTag = angular.element(this);
+				console.log(clickedTag);
+
+				$scope.thumbToShow = clickedTag[0].tag.toUpperCase();
+				//console.log(event.srcElement.innerText.toUpperCase());
+				//console.log($scope.thumbToShow);
+			}
+
+			// $scope.data = FetchData.featured;
+			// console.log($scope.data);
 
 	}])
 	.controller('WorkDetailCtrl', ['$scope', '$http', '$routeParams',

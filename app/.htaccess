@@ -210,9 +210,14 @@ AddDefaultCharset utf-8
 
 <IfModule mod_rewrite.c>
     Options +FollowSymlinks
-  # Options +SymLinksIfOwnerMatch
+    # Options +SymLinksIfOwnerMatch
     RewriteEngine On
-  # RewriteBase /
+    # RewriteBase /portfolioNG/app/
+    # RewriteCond %{REQUEST_FILENAME} !-f
+    # RewriteCond %{REQUEST_FILENAME} !-d
+    # RewriteCond %{REQUEST_URI} !index
+    # RewriteCond %{REQUEST_URI} !.*\.(css¦js|html|png)
+    # RewriteRule ^(.*) /index.html/#/$1
 </IfModule>
 
 # ------------------------------------------------------------------------------

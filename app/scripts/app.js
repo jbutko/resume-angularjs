@@ -28,5 +28,8 @@ angular
         });
 
         // pretty HTML5 links
-        $locationProvider.html5Mode(true);
+        if (window.history && window.history.pushState) {
+            $locationProvider.html5Mode(false);
+        }
+
   }]);

@@ -174,19 +174,26 @@ html {
   line-height: 1.6; }
 
 body {
-  font-family: sanchezregular, arial, serif;
-  color: #757575;
   background: #E5DFCD url('../img/concrete-wall.png');
+  color: #757575;
+  font-family: sanchezregular, arial, serif;
   font-size: 0.85em;
   line-height: 1.6;
-  min-height: 100%;
   /* Stretch html body to device height */
+/*  height: 100%; */
+  min-height: 100%;
   padding-top: 80px;
   -webkit-box-shadow: inset 20px -60px 250px 60px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: inset 20px -60px 250px 60px rgba(0, 0, 0, 0.1);
   -ms-box-shadow: inset 20px -60px 250px 60px rgba(0, 0, 0, 0.1);
   -o-box-shadow: inset 20px -60px 250px 60px rgba(0, 0, 0, 0.1);
   box-shadow: inset 20px -60px 250px 60px rgba(0, 0, 0, 0.1); }
+
+.ngViewContainer {
+    height: 100%;
+    min-height: 100%;
+    overflow: auto;
+}
 
 /* HEADINGS */
 h1, h2, h3, h4 {
@@ -338,7 +345,9 @@ li {
   perspective: 1000;
   position: relative;
   max-height: 184px;
-  overflow: hidden; }
+  overflow: hidden;
+  display: inline-table;
+  }
 
 .portfolio-info-wrapper {
   margin-top: 5px; }
@@ -373,7 +382,7 @@ li {
   top: 17px;
   left: 0;
   box-shadow: none;
-  padding: 0 10px 0 10px; }
+  padding: 0 0 27px 0; }
 
 .tags {
   font-size: 0.95em;
@@ -426,11 +435,16 @@ li {
 /* GALLERY IMAGES */
 /* Hide gallery on window load - images lazy load */
 .gallery .grid_50 {
-  margin-bottom: 5px;
-  width: 48%; }
+  margin: 0 1px 1px 0;
+  width: 48%;
+  display: inline-table;
+  }
 
 .gallery a {
-  overflow: hidden; }
+  overflow: hidden;
+  max-height: 100px;
+  display: block;
+}
 
 .gallery img {
   border: 1px solid #9C9C9C;
@@ -438,7 +452,9 @@ li {
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  vertical-align: top;
+}
 
 .miavydavatelstvo li.grid_50 {
   max-height: 100px;

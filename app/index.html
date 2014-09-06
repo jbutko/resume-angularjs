@@ -4,11 +4,34 @@
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
 <!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
   <head>
+    <!--
+    /**
+     *
+     * FILE INFO: main HTML file
+     * TITLE: Jozef Butko: Resume of a front-end web developor
+     * AUTHOR: Jozef Butko
+     * URL: www.jozefbutko.com/resume
+     * UPDATED: July 2014
+     *
+     */
+    -->
     <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <title>Jozef Butko: Resumé of A front-end web developer</title>
+    <meta name="description" content="Curriculum Vitae of A front-end web developer">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Hey Crawler, please don't crawl this page. Thanks! -->
+    <meta name="robots" content="noindex, nofollow">
+
+    <!-- Favicon: http://www.jonathantneal.com/blog/understand-the-favicon -->
+    <link rel="apple-touch-icon" href="img/favicon/apple-icon-touch.png">
+    <link rel="icon" href="img/favicon/favicon.png">
+    <!--[if IE]>
+      <link rel="shortcut icon" href="img/favicon/favicon.ico">
+    <![endif]-->
+    <!-- favicon.ico for IE10 win -->
+    <meta name="msapplication-TileColor" content="#e5dfcd">
+    <meta name="msapplication-TileImage" content="img/win8-tile-icon.png">
     <link rel="stylesheet" href="styles/normalize.css">
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
@@ -16,6 +39,8 @@
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/css/themes/tooltipster-light.min.css">
+    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/css/tooltipster.min.css">
     <!-- BASE URL -->
     <base href="/portfolioNG/app/">
     <!-- 996px RESPONSIVE GRID sYSTEM -  -->
@@ -34,7 +59,7 @@
       <!-- LATESTS WORK BTN -->
       <!-- <a class="latest-works inline-block absolute boxsizing btn" href="#/works" ng-click="showPortfolio = !showPortfolio">Latest Works</a> -->
       <!-- <a class="latest-works inline-block absolute boxsizing btn" ng-href="#/{{showPortfolio}}" ng-click="showMePortfolio()">Latest Works</a> -->
-      <div ng-view=""></div>
+      <div ng-view="" class="ngViewContainer"></div>
     </div>
 
     <!-- FOOTER -->
@@ -60,9 +85,10 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

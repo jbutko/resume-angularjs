@@ -179,7 +179,6 @@
                 "classThumb": "mix grid_portfolio inline-block jquery opensource",
                 "services": [],
                 "features": []
-
             },
             {
                 "id": 2,
@@ -386,7 +385,7 @@
                 ],
                 "images": [ "mia01.png", "mia02.png", "mia03.png", "mia04.png", "mia05.png" ],
                 "mainThumbnail": "mia-thumb.png",
-                "thumbs": [ "mia01_tn.jpg", "mia02_tn.jpg", "mia03_tn.jpg", "mia04_tn.jpg", "mia05_tn.jpg" ],
+                "thumbs": [ "thumbs_mia01.jpg", "thumbs_mia02.jpg", "thumbs_mia03.jpg", "thumbs_mia04.jpg", "thumbs_mia05.jpg" ],
                 "classThumb": "mix grid_portfolio inline-block html css responsive jquery freelance",
                 "services": [],
                 "features": []
