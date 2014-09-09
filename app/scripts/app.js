@@ -6,7 +6,9 @@ angular
     'ngRoute',
     'portfolioNgApp.controller',
     'portfolioNgApp.factory',
-    'ngAnimate'
+    'portfolioNgApp.directive',
+    'ngAnimate',
+    'ngFx'
   ])
   .config(['$routeProvider', '$locationProvider',
     function ($routeProvider, $locationProvider) {

@@ -1,9 +1,6 @@
 <!-- LATESTS WORK BTN -->
 <a class="latest-works inline-block absolute boxsizing btn" href="#"><span><i class="icon-x-circle"></i></span></a>
 
-<!-- RESUME BIG HEADING -->
-<h2 class="resume">RESUMÉ</h2>
-
 <!-- PORTFOLIO SECTION: Hidden on default, opened after clicking on "Latests Work" button -->
 <div class="container clearfix portfolio-wrapper" >
 
@@ -16,7 +13,7 @@
 	<div id="Container" class="clearfix">
 
 		<!-- PORTFOLIO GRID THUMBNAILS -->
-		<div class="grid_12"><div id="{{element.CSSid}}" class="{{element.classThumb}}" data-ng-repeat="element in filteredData" data-ng-click="showPortfolioItem($event); $event.preventDefault();"><!--
+		<div class="grid_12"><div id="{{element.CSSid}}" class="{{element.classThumb}} fx-fade-normal fx-easing-quart fx-speed-250" data-ng-repeat="element in filteredData" data-ng-click="showPortfolioItem($event); $event.preventDefault();"><!--
 				 --><a data-ng-href="{{element.href}}"><!--
 					 --><img ng-src="img/{{element.mainThumbnail}}" alt="{{element.titleThumb}}"><!--
 					 --><span class="text-hide">{{element.titleThumb}}</span><!--
@@ -41,6 +38,7 @@
 					<h2 class="text-left block">{{element.titleH2}}</h2>
 					<h3>Description</h3>
 					<p data-ng-repeat="desc in element.description"><span data-ng-show="element.description.length !== 1 ">&#8226; </span>{{desc}}</p>
+					<!-- If there is no 'Features' part in projectItems array hide this -->
 					<h3 data-ng-hide="data.projects.projectItems[$index].features.length < 1">Features</h3>
 					<p data-ng-repeat="feature in element.features"><span data-ng-show="element.features.length !== 1 ">&#8226; </span>{{feature}}</p>
 				</div>
@@ -50,6 +48,7 @@
 					<!-- ICONS -->
 					<ul>
 						<li><i class="icon-eye icon"></i><a target="_blank" ng-href="{{element.livePreview}}">Live Preview</a></li>
+						<!-- If there is no 'GitHub' link in projectItems array hide this -->
 						<li data-ng-if="data.projects.projectItems[$index].githubLink.length < 1"><i class="icon-github-alt icon"></i><a target="_blank" ng-href="{{element.githubLink}}">github.com</a></li>
 						<li><i class="icon-clock icon"></i>{{element.projectDate}}</li>
 						<li><i class="icon-tag icon"></i><span ng-repeat="tag in element.tags">{{tag}}<span ng-show=" ! $last ">, </span></span></li>
@@ -57,10 +56,12 @@
 
 					<!-- GALLERY -->
 					<div class="gallery">
+						<!-- If there is no 'Gallery' for actual project in projectItems array hide this -->
 						<h3 data-ng-hide="data.projects.projectItems[$index].thumbs.length < 1">Gallery</h3>
-						<ul>
+						<ul class="magnificPopup" data-ng-hide="data.projects.projectItems[$index].thumbs.length < 1">
 							<li class="grid_50" ng-repeat="img in element.images">
-								<a ng-href="img/gallery/{{img}}" class="fullsizable">
+								<!-- MAGNIFIC POPUP DIRECTIVE -->
+								<a ng-href="img/gallery/{{img}}" >
 									<img alt="{{element.CSSid}} thumb" ng-src="img/gallery/{{element.thumbs[$index]}}">
 								</a>
 							</li>
