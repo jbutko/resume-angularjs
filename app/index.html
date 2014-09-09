@@ -32,17 +32,20 @@
     <!-- favicon.ico for IE10 win -->
     <meta name="msapplication-TileColor" content="#e5dfcd">
     <meta name="msapplication-TileImage" content="img/win8-tile-icon.png">
-    <link rel="stylesheet" href="styles/normalize.css">
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css({.tmp,app}) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="http://localhost/portfolioNG/app/styles/normalize.css">
+    <!-- <link rel="stylesheet" href="http://jozefbutko.com/resumeNG/styles/normalize.css"> -->
+    <link rel="stylesheet" href="http://localhost/portfolioNG/app/styles/main.css">
+    <!-- <link rel="stylesheet" href="http://jozefbutko.com/resumeNG/styles/main.css"> -->
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/css/themes/tooltipster-light.min.css">
     <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/css/tooltipster.min.css">
     <!-- BASE URL -->
     <base href="/portfolioNG/app/">
+    <!-- <base href="/resumeNG1/"> -->
     <!-- 996px RESPONSIVE GRID sYSTEM -  -->
     <link href="http://static.tumblr.com/zsno5u0/eHRn53ur2/grid.css" rel="stylesheet" type="text/css" />
     <!-- FONT AWESOME -->
@@ -63,7 +66,8 @@
       <!-- LATESTS WORK BTN -->
       <!-- <a class="latest-works inline-block absolute boxsizing btn" href="#/works" ng-click="showPortfolio = !showPortfolio">Latest Works</a> -->
       <!-- <a class="latest-works inline-block absolute boxsizing btn" ng-href="#/{{showPortfolio}}" ng-click="showMePortfolio()">Latest Works</a> -->
-      <div ng-view="" class="ngViewContainer"></div>
+      <!-- <div ng-view="" class="ngViewContainer"></div> -->
+      <div ui-view class="ngViewContainer"></div>
     </div>
 
     <!-- FOOTER -->
@@ -90,16 +94,15 @@
     <!-- VENDOR PLUGINS -->
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script src="scripts/jquery/plugins.js"></script>
+    <script type="text/javascript" src="scripts/jquery/plugins.js"></script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/ngFX/dist/ngFx.min.js"></script>
     <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/ngFx/dist/ngFx.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

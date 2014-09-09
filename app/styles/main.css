@@ -199,7 +199,7 @@ body {
 h1, h2, h3, h4 {
   color: #7A7373;
   font-family: montserratregular, arial, serif;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004); }
+  /*text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.004);*/ }
 
 h1 {
   font-family: montserratbold, Georgia, 'Times New Roman', serif;
@@ -420,7 +420,8 @@ li {
   box-sizing: border-box;
   text-align: right;
   background: rgba(0, 0, 0, 0.7);
-  opacity: 0; }
+  opacity: 0;
+  text-align: center; }
 
 .info h3, .info h4 {
   color: #E5DFCD; }
@@ -443,7 +444,7 @@ li {
 .gallery a {
   overflow: hidden;
   max-height: 100px;
-  display: block;
+  display: table-row;
 }
 
 .gallery a:hover {
@@ -706,6 +707,7 @@ footer.container {
 	 Helpers
 	 ========================================================================== */
 /* Animations */
+/* If we enter home page (/) or /works */
 .ngViewContainer.ng-enter,
 .ngViewContainer.ng-leave
 .portfolio-info.ng-enter,
@@ -1442,6 +1444,16 @@ img.mfp-img {
 
 .safari .portfolio-info-right {
   position: static; }
+
+/* IE Hacks */
+.lt-ie9 .gallery img {
+  vertical-align: middle;
+}
+
+.lt-ie9 .miavydavatelstvo li.grid_50 {
+  height: 100px;
+  display: inline;
+}
 
 @media only screen and (max-width: 479px) {
   .safari .mix a {

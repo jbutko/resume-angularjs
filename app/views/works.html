@@ -1,20 +1,24 @@
 <!-- LATESTS WORK BTN -->
-<a class="latest-works inline-block absolute boxsizing btn" href="#"><span><i class="icon-x-circle"></i></span></a>
+<!-- <a class="latest-works inline-block absolute boxsizing btn" href="#"><span><i class="icon-x-circle"></i></span></a> -->
+<a class="latest-works inline-block absolute boxsizing btn" ui-sref="home"><span><i class="icon-x-circle"></i></span></a>
 
 <!-- PORTFOLIO SECTION: Hidden on default, opened after clicking on "Latests Work" button -->
 <div class="container clearfix portfolio-wrapper" >
 
 	<!-- FILTER TAGS -->
 	<ul class="tags grid_12">
-		<li class="inline-block tag" data-ng-repeat="tag in data.tags"><i class="icon-tag icon"></i><a class="filter btn smooth" ng-href="#/works/{{tag}}" data-ng-click="portfolioFilter($event); $event.preventDefault();">{{tag}}</a></li>
+		<!-- <li class="inline-block tag" data-ng-repeat="tag in data.tags"><i class="icon-tag icon"></i><a class="filter btn smooth" ng-href="#/works/{{tag}}" data-ng-click="portfolioFilter($event);">{{tag}}</a></li> -->
+		<li class="inline-block tag" data-ng-repeat="tag in data.tags"><i class="icon-tag icon"></i><a class="filter btn smooth" ui-sref="works.tag({ tag: tag })" href data-ng-click="portfolioFilter($event);">{{tag}}</a></li>
 	</ul>
 
 	<!-- PORTFOLIO ITEMS -->
 	<div id="Container" class="clearfix">
 
+				 <!--<a data-ng-href="{{element.href}}">-->
 		<!-- PORTFOLIO GRID THUMBNAILS -->
+		<!-- <div ui-view></div> -->
 		<div class="grid_12"><div id="{{element.CSSid}}" class="{{element.classThumb}} fx-fade-normal fx-easing-quart fx-speed-250" data-ng-repeat="element in filteredData" data-ng-click="showPortfolioItem($event); $event.preventDefault();"><!--
-				 --><a data-ng-href="{{element.href}}"><!--
+				 --><a ui-sref="works.single({ CSSid: element.CSSid })"><!--
 					 --><img ng-src="img/{{element.mainThumbnail}}" alt="{{element.titleThumb}}"><!--
 					 --><span class="text-hide">{{element.titleThumb}}</span><!--
 					 --><!-- INSIDE INFO --><!--
@@ -58,7 +62,7 @@
 					<div class="gallery">
 						<!-- If there is no 'Gallery' for actual project in projectItems array hide this -->
 						<h3 data-ng-hide="data.projects.projectItems[$index].thumbs.length < 1">Gallery</h3>
-						<ul class="magnificPopup" data-ng-hide="data.projects.projectItems[$index].thumbs.length < 1">
+						<ul class="magnificPopup">
 							<li class="grid_50" ng-repeat="img in element.images">
 								<!-- MAGNIFIC POPUP DIRECTIVE -->
 								<a ng-href="img/gallery/{{img}}" >
@@ -74,4 +78,4 @@
 
 		</div><!-- .portfolio-info-wrapper END -->
 	</div><!-- #Container END -->
-</div><!-- .portfolio-wrapper END
+</div><!-- .portfolio-wrapper END -->

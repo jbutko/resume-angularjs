@@ -15,6 +15,9 @@ angular
 			    //console.log($scope.data);
 			});
 
+			console.log($location);
+			console.log($location.path);
+
 			// Since when am I into web development?
 			// call service for carrer years calculation
 			var careerYears = FetchData.careerYears();
@@ -25,8 +28,8 @@ angular
 			$scope.careerMonths = careerYears.months;
 
 	}])
-	.controller('WorksCtrl', ['$scope', '$http', 'FetchData', '$location',
-		function($scope, $http, FetchData, $location) {
+	.controller('WorksCtrl', ['$scope', '$http', 'FetchData', '$location', '$stateParams', '$state',
+		function($scope, $http, FetchData, $location, $stateParams, $state) {
 
 			// Fetch all data from main JSON file
 			FetchData.getFeatured().then(function() {
@@ -41,7 +44,47 @@ angular
 			    // Loop through every projectItem and push it to filteredData array
 			    angular.forEach($scope.data.projects.projectItems, function(value , key) {
 
-			    	filteredData.push(value);
+			    	//filteredData.push(value);
+			    	//console.log($state.params.tag.CSSid);
+			    	console.log($state.params.CSSid);
+			    	console.log($state.params);
+
+			    	// On the page refresh load only portfolio thumbnails with URL parameter tag (eg. /CSS)
+			    	if (_.contains(value.tags, $state.params.tag)) {
+			    		filteredData.push(value);
+
+			    		// overwrite description according to first loaded thumbnail
+			    		$scope.itemTitleToShow = filteredData[0].CSSid;
+
+			    		console.log('1');
+
+			    	// else if parameter tag === 'All' load all thumbnails
+			    	} else if ( $state.params.tag === 'All' ) {
+			    		filteredData.push(value);
+
+			    		// overwrite description according to first loaded thumbnail
+			    		$scope.itemTitleToShow = filteredData[0].CSSid;
+
+			    		console.log('2');
+
+			    	// else if we come from root (/) poge there will be no state.params so load all thumbnails
+			    	} else if ( $state.params.tag === undefined && $state.params.CSSid === undefined ) {
+			    		filteredData.push(value);
+
+			    		// overwrite description according to first loaded thumbnail
+			    		$scope.itemTitleToShow = filteredData[0].CSSid;
+
+			    		console.log('3');
+
+
+			    	} else if (_.contains(value.CSSid, ($state.params.tag === undefined) && $state.params.CSSid)) {
+			    		filteredData.push(value);
+			    		//$scope.itemTitleToShow = filteredData[0].CSSid;
+
+			    		$scope.itemTitleToShow = filteredData[0].CSSid;
+
+			    		console.log('4');
+			    	}
 
 			    });
 
@@ -50,13 +93,13 @@ angular
 
 			});
 
-			$scope.show = false;
+			//$scope.show = false;
 
 			// default portfolio item which will be shown after refresh/initial page load
 			$scope.itemTitleToShow = 'stickynavbar';
 			$scope.showPortfolioItem = function(event) {
 
-				$scope.show = !$scope.show;
+				//$scope.show = !$scope.show;
 
 				// Which portfolio thumbnail was clicked?
 				var clickedItemID = angular.element(this);
@@ -65,11 +108,12 @@ angular
 				$scope.itemTitleToShow = clickedItemID[0].element.CSSid;
 			}
 
-			var filteredData = [];
 			$scope.portfolioFilter = function(event) {
 
-				_.remove(filteredData);
+				// empty filterData array
+				var filteredData = [];
 
+				//_.remove(filteredData);
 
 				// Define variables
 				var clickedTag = angular.element(this), // clicked tag's object

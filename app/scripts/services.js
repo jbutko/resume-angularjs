@@ -15,6 +15,7 @@ angular
 				return $http({
 					method: 'GET',
 					url: '/portfolioNG/app/assets/data/appData.json',
+					//url: '/resumeNG1/assets/data/appData.json',
 					cache: true
 				}).success(function(data) {
 						// magic line, we resolve the data IN the factory!

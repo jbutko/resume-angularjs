@@ -171,9 +171,7 @@
                 "projectDate": "March 2014",
                 "type": "PERSONAL PROJECT",
                 "tags": [
-                                        "jQuery",
-                    "Open Source",
-                    "Design"
+                    "jQuery", "Open Source", "Design"
                 ],
                 "images": [],
                 "mainThumbnail": "stickynavbar.png",
@@ -195,7 +193,7 @@
                 "projectDate": "November 2013",
                 "type": "FREELANCE",
                 "tags": [
-                    "CSS", "CSS3", "jQuery", "WP"
+                    "CSS", "CSS3", "jQuery"
                 ],
                 "images": [
                     "sccd01.png", "sccd02.png", "sccd03.png", "sccd04.png"
@@ -237,7 +235,7 @@
                 "projectDate": "August 2013",
                 "type": "PERSONAL PROJECT",
                 "tags": [
-                    "CSS3", "HTML5", "jQuery", "PHP", "WP"
+                    "CSS", "CSS3", "HTML", "jQuery", "PHP", "WP"
                 ],
                 "images": [ "predators1.png", "predators2.png", "predators3.png" ],
                 "mainThumbnail": "Predators230x230.png",
@@ -260,7 +258,7 @@
                 "projectDate": "September 2013",
                 "type": "PERSONAL PROJECT",
                 "tags": [
-                    "CSS3", "HTML5", "jQuery", "PHP", "WP"
+                    "CSS", "CSS3", "HTML", "jQuery", "PHP", "WP", "Responsive"
                 ],
                 "images": [ "creativio1.png", "creativio2.png", "creativio3.png", "creativio4.png", "creativio5.png", "creativio6.png", "creativio7.png", "creativio8.png" ],
                 "mainThumbnail": "Creativio230x230.png",
@@ -298,7 +296,7 @@
                 "projectDate": "June 2013",
                 "type": "PERSONAL PROJECT",
                 "tags": [
-                    "CSS", "CSS3", "Design", "HTML", "HTML5", "PHP", "WP"
+                    "CSS", "CSS3", "Design", "HTML", "PHP", "WP", "Responsive"
                 ],
                 "images": [ "kolky1.png", "kolky2.png", "kolky3.png", "kolky4.png" ],
                 "mainThumbnail": "Kolky230x230.png",
@@ -321,7 +319,7 @@
                 "projectDate": "June 2014",
                 "type": "PERSONAL PROJECT",
                 "tags": [
-                    "CSS", "CSS3", "HTML", "HTML5", "jQuery", "Themes", "Tumblr"
+                    "CSS", "CSS3", "HTML", "jQuery", "Themes", "Tumblr", "Responsive"
                 ],
                 "images": [ "02_preview2.jpg", "04_preview4.jpg", "10_closeup.jpg", "lambda-one-column.png", "lambda-preview-cm.jpg" ],
                 "mainThumbnail": "lambda.jpg",
@@ -358,7 +356,7 @@
                 "projectDate": "August 2013",
                 "type": "PERSONAL PROJECT",
                 "tags": [
-                    "CSS", "HTML5", "PHP", "Themes", "WP"
+                    "CSS", "HTML", "PHP", "Themes", "WP", "Responsive"
                 ],
                 "images": [ "minima01.png", "minima02.png", "minima03.png", "minima04.png", "minima05.png", "minima06.png", "minima07.png" ],
                 "mainThumbnail": "Minima230x230.png",
@@ -383,11 +381,11 @@
                 "projectDate": "August 2014",
                 "type": "FREELANCE",
                 "tags": [
-                    "CSS", "HTML5", "Responsive", "jQuery"
+                    "CSS", "HTML", "Responsive", "jQuery"
                 ],
                 "images": [ "mia01.png", "mia02.png", "mia03.png", "mia04.png", "mia05.png" ],
                 "mainThumbnail": "mia-thumb.png",
-                "thumbs": [ "thumbs_mia01.jpg", "thumbs_mia02.jpg", "thumbs_mia03.jpg", "thumbs_mia04.jpg", "thumbs_mia05.jpg" ],
+                "thumbs": [ "thumbs_mia01.png", "thumbs_mia02.png", "thumbs_mia03.png", "thumbs_mia04.png", "thumbs_mia05.png" ],
                 "classThumb": "mix grid_portfolio inline-block html css responsive jquery freelance",
                 "services": [],
                 "features": []
@@ -406,7 +404,7 @@
                 "projectDate": "June 2014",
                 "type": "FREELANCE",
                 "tags": [
-                    "CSS", "CSS3", "HTML", "HTML5"
+                    "CSS", "CSS3", "HTML", "Responsive"
                 ],
                 "images": [ "detail.png", "full-site.png", "ipad.png", "iphone.png" ],
                 "mainThumbnail": "damian.png",
