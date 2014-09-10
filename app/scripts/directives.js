@@ -42,3 +42,27 @@ angular
             }
         };
     });
+    // .directive('tooltipster', function() {
+    //     return {
+    //         // Restrict it to be an attribute in this case
+    //         restrict: 'AEC',
+    //         replace: false,
+    //         transclude: false,
+    //         priority: 1001,
+    //         scope: true,
+    //         // responsible for registering DOM listeners as well as updating the DOM
+    //         // fullscreen gallery
+    //         link: function(scope, element, attrs) {
+    //             setTimeout(function() {
+    //                 $(element).tooltipster({
+    //                     animation: 'grow',
+    //                     delay: 50,
+    //                     theme: 'tooltipster-light',
+    //                     touchDevices: false,
+    //                     trigger: 'hover',
+    //                     position: 'top-left'
+    //                 });
+    //             }, 100);
+    //         }
+    //     };
+    // });

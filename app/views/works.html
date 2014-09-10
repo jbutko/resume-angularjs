@@ -17,7 +17,7 @@
 				 <!--<a data-ng-href="{{element.href}}">-->
 		<!-- PORTFOLIO GRID THUMBNAILS -->
 		<!-- <div ui-view></div> -->
-		<div class="grid_12"><div id="{{element.CSSid}}" class="{{element.classThumb}} fx-fade-normal fx-easing-quart fx-speed-250" data-ng-repeat="element in filteredData" data-ng-click="showPortfolioItem($event); $event.preventDefault();"><!--
+		<div class="grid_12"><div id="{{element.CSSid}}" class="{{element.classThumb}} fx-fade-normal fx-easing-quart fx-speed-50" data-ng-repeat="element in filteredData" data-ng-click="showPortfolioItem($event); $event.preventDefault();"><!--
 				 --><a ui-sref="works.single({ CSSid: element.CSSid })"><!--
 					 --><img ng-src="img/{{element.mainThumbnail}}" alt="{{element.titleThumb}}"><!--
 					 --><span class="text-hide">{{element.titleThumb}}</span><!--
