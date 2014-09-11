@@ -7,3 +7,6 @@ dist
 .sass-cache
 
 app/bower_components
+
+test
+app/fonts

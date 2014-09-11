@@ -2,8 +2,11 @@
 
 angular
 	.module('portfolioNgApp.controller', ['ngRoute'])
-	.controller('MainCtrl', ['$scope', '$http', 'FetchData', '$location',
-		function($scope, $http, FetchData, $location) {
+	.controller('MainCtrl', ['$scope', '$rootScope', '$http', 'FetchData', '$location',
+		function($scope, $rootScope, $http, FetchData, $location) {
+
+			// for 'Latest Works' button toggling
+			$rootScope.isHome = true;
 
 			FetchData.getFeatured().then(function() {
 				$scope.data = {};
@@ -20,8 +23,14 @@ angular
 			$scope.careerMonths = careerYears.months;
 
 	}])
-	.controller('WorksCtrl', ['$scope', '$http', 'FetchData', '$location', '$stateParams', '$state',
-		function($scope, $http, FetchData, $location, $stateParams, $state) {
+	.controller('WorksCtrl', ['$scope', '$rootScope', '$http', 'FetchData', '$location', '$stateParams', '$state',
+		function($scope, $rootScope, $http, FetchData, $location, $stateParams, $state) {
+
+			// for 'Latest Works' button toggling
+			$scope.location = $location.$$path;
+			if ($rootScope.isHome = true) {
+				$rootScope.isHome = false;
+			}
 
 			// Fetch all data from main JSON file
 			FetchData.getFeatured().then(function() {
@@ -73,8 +82,6 @@ angular
 			// default portfolio item which will be shown after refresh/initial page load
 			$scope.itemTitleToShow = 'stickynavbar';
 			$scope.showPortfolioItem = function(event) {
-
-				//$scope.show = !$scope.show;
 
 				// Which portfolio thumbnail was clicked?
 				var clickedItemID = angular.element(this);

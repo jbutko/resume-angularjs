@@ -11,7 +11,7 @@
      * TITLE: Jozef Butko: Resume of a front-end web developor
      * AUTHOR: Jozef Butko
      * URL: www.jozefbutko.com/resume
-     * UPDATED: July 2014
+     * UPDATED: September 2014
      *
      */
     -->
@@ -33,14 +33,9 @@
     <meta name="msapplication-TileColor" content="#e5dfcd">
     <meta name="msapplication-TileImage" content="img/win8-tile-icon.png">
     <!-- BASE URL -->
-    <!-- <base href="/portfolioNG/app/"> -->
+    <!-- <base href="/portfolioNG/app/">-->
     <base href="/resumeNG1/">
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/css/themes/tooltipster-light.min.css">
-    <link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/tooltipster/3.0.5/css/tooltipster.min.css">
-    <!-- 996px RESPONSIVE GRID sYSTEM -  -->
-    <link href="http://static.tumblr.com/zsno5u0/eHRn53ur2/grid.css" rel="stylesheet" type="text/css" />
-    <!-- FONT AWESOME -->
-    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
     <!-- AMPERSAND GOOGLE FONT -->
     <link href='http://fonts.googleapis.com/css?family=Headland+One' rel='stylesheet' type='text/css'>
     <!-- build:css styles/vendor.css -->
@@ -61,16 +56,18 @@
     <div class="container body-wrapper relative clearfix" >
       <!-- RESUME BIG HEADING -->
       <h2 class="resume">RESUMÉ</h2>
+
       <!-- LATESTS WORK BTN -->
-      <!-- <a class="latest-works inline-block absolute boxsizing btn" href="#/works" ng-click="showPortfolio = !showPortfolio">Latest Works</a> -->
-      <!-- <a class="latest-works inline-block absolute boxsizing btn" ng-href="#/{{showPortfolio}}" ng-click="showMePortfolio()">Latest Works</a> -->
-      <!-- <div ng-view="" class="ngViewContainer"></div> -->
+      <a class="latest-works inline-block absolute boxsizing btn" ui-sref="works" data-ng-show="isHome">Latest Works</a>
+      <a class="latest-works inline-block absolute boxsizing btn" ui-sref="home" data-ng-hide="isHome"><span><i class="icon-x-circle"></i></span></a>
+
       <div ui-view class="ngViewContainer"></div>
     </div>
 
     <!-- FOOTER -->
     <footer class="container clearfix">
-      <span class="grid_12 center text-center copyright"><span class="copy">&copy;</span> Copyright 2014 Jozef Butko. Made with <span class="fa fa-heart"></span> <span class="amp">&amp;</span> AngularJS.</span>
+      <span class="grid_12 center text-center copyright">
+        <span class="copy">&copy;</span> Copyright 2014 Jozef Butko. Made with <span class="fa fa-heart"></span> <span class="amp">&amp;</span> AngularJS.</span>
     </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -84,14 +81,16 @@
        ga('send', 'pageview');
     </script>
 
-    <!-- VENDOR PLUGINS -->
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 
     <!--[if lt IE 9]>
     <script src="bower_components/es5-shim/es5-shim.js"></script>
     <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
+    
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/0.9.9/jquery.magnific-popup.min.js"></script>
+    <script src="scripts/jquery/plugins.js"></script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->

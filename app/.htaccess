@@ -45,7 +45,7 @@
 # Allow access from all domains for web fonts
 
 <IfModule mod_headers.c>
-    <FilesMatch "\.(eot|font.css|otf|ttc|ttf|woff)$">
+    <FilesMatch "\.(eot|font.css|otf|ttc|ttf|woff|svg)$">
         Header set Access-Control-Allow-Origin "*"
     </FilesMatch>
 </IfModule>
@@ -157,8 +157,8 @@ ErrorDocument 404 /404.html
 
     # Make SVGZ fonts work on iPad:
     # https://twitter.com/FontSquirrel/status/14855840545
-    AddType     image/svg+xml                           svg svgz
-    AddEncoding gzip                                    svgz
+    AddType image/svg+xml .svg svgz
+    AddEncoding gzip svgz
 
   # Other
     AddType application/octet-stream                    safariextz
@@ -406,8 +406,9 @@ AddDefaultCharset utf-8
                                       application/x-web-app-manifest+json \
                                       application/xhtml+xml \
                                       application/xml \
+                                      text/html text/plain text/css application/json \
                                       font/opentype \
-                                      image/svg+xml \
+                                      image/svg+xml application/vnd.ms-fontobject \
                                       image/x-icon \
                                       text/css \
                                       text/html \

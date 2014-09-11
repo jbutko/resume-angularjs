@@ -1,0 +1,430 @@
+{
+    "featured": [
+        {
+            "title": "webdesignerdepot.com",
+            "link": "http://www.webdesignerdepot.com/2014/03/50-essential-freebies-for-web-designers-april-2014/",
+            "month": "Mar 2014",
+            "titleAttr": "Article: 50 essential freebies for web designers, April 2014 (StickyNavbar.js)"
+        },
+        {
+            "title": "designgeekz.com",
+            "link": "http://designgeekz.com/20-best-jquery-plugins-for-2014/",
+            "month": "Mar 2014",
+            "titleAttr": "Article: 20 Best jQuery Plugins for 2014 (StickyNavbar.js)"
+        },
+        {
+            "title": "css-weekly.com",
+            "link": "http://css-weekly.com/issue-99/",
+            "month": "Feb 2014",
+            "titleAttr": "Article: CSS-Weekly Issue 99 (Direction-Aware Hover Effect With CSS3 Transform And JQuery)"
+
+        },
+        {
+            "title": "html5weekly.com",
+            "link": "http://html5weekly.com/issues/128",
+            "month": "Mar 2014",
+            "titleAttr": "Article: HTML5 Weekly Issue 128 (stickyNavbar.js)"
+        }
+    ],
+    "skills": [
+        {
+            "title": "HTML5",
+            "titleAttr": "Advanced level",
+            "class": "grid_50 tooltip"
+        },
+        {
+            "title": "CSS3",
+            "titleAttr": "Advanced level",
+            "class": "grid_50 tooltip"
+        },
+        {
+            "title": "SCSS",
+            "titleAttr": "Advanced level",
+            "class": "grid_50 tooltip"
+        },
+        {
+            "title": "jQuery",
+            "titleAttr": "Advanced level",
+            "class": "grid_50 tooltip"
+        },
+        {
+            "title": "RWD",
+            "titleAttr": "Responsive web design: Advanced level",
+            "class": "grid_50 tooltip"
+        },
+        {
+            "title": "PSD to WP",
+            "titleAttr": "Advanced level",
+            "class": "grid_50 tooltip"
+        },
+        {
+            "title": "PSD to HTML5",
+            "titleAttr": "Advanced level",
+            "class": "grid_50 tooltip"
+        },
+        {
+            "title": "AJAX",
+            "titleAttr": "Advanced level",
+            "class": "grid_50 tooltip"
+        },
+        {
+            "title": "PHP",
+            "titleAttr": "Beginner level",
+            "class": "grid_50 tooltip"
+        },
+        {
+            "title": "javaScript",
+            "titleAttr": "Intermediate level",
+            "class": "grid_50 tooltip"
+        },
+        {
+            "title": "AngularJS",
+            "titleAttr": "Intermediate level",
+            "class": ""
+        },
+        {
+            "title": "Cross-browser compatibility",
+            "titleAttr": "",
+            "class": ""
+        },
+        {
+            "title": "JS APIs (FB, soundcloud)",
+            "titleAttr": "Facebook SDK for JavaScript, SoundCloud API",
+            "class": "tooltip"
+        }
+    ],
+    "tools": [
+        {
+            "title": "Adobe Photoshop",
+            "titleAttr": "Intermediate level",
+            "class": "tooltip"
+        },
+        {
+            "title": "Grunt",
+            "titleAttr": "",
+            "class": ""
+        },
+        {
+            "title": "Bower",
+            "titleAttr": "",
+            "class": ""
+        },
+        {
+            "title": "Yo",
+            "titleAttr": "",
+            "class": ""
+        },
+        {
+            "title": "Sublime Text",
+            "titleAttr": "",
+            "class": ""
+        },
+        {
+            "title": "Git",
+            "titleAttr": "Intermediate level",
+            "class": "tooltip"
+        },
+        {
+            "title": "Chrome Dev Tools",
+            "titleAttr": "",
+            "class": ""
+        }
+    ],
+    "jobs": [
+        {
+            "id": 1,
+            "position": "Front-end web developer",
+            "employer": "self-employed",
+            "jobDate": "Oct 2012 - Present",
+            "description": "Specializing in building WordPress powered websites: theme code development, deployment on server, custom post type setup, backups, security, cache, speed optimization. PSD to HTML conversion. jQuery scripts development. Tumblr theme development."
+        },
+        {
+            "id": 2,
+            "position": "Analysis & Technical Supporter",
+            "employer": "Samsung Slovakia",
+            "jobDate": "Nov 2010 - Apr 2014",
+            "description": "Cooperation on projects and processes, Control of processes, Analysis of processes, Daily and monthly reporting, Implementation of processes and projects into the live use, Cooperation with other departments."
+        }
+    ],
+    "projects": {
+        "thumbnails": [
+            "Creativio230x230.png",
+            "damian.png",
+            "Kolky230x230.png",
+            "lambda.jpg",
+            "Minima230x230.png",
+            "Predators230x230.png",
+            "sccd230x230.png",
+            "stickynavbar.png"
+        ],
+        "projectItems": [
+            {
+                "id": 1,
+                "CSSid": "stickynavbar",
+                "titleH2": "stickyNavbar.js: jQuery Plugin",
+                "titleThumb": "stickyNavbar.js",
+                "description": [
+                    "stickyNavbar.js is a jQuery plugin that helps you stick your navigation bars to the top of the browser window during scrolling. It could stop right here but stickyNavbar.js offers more: you can use your favourite jQuery effects or even fantastic Animate.CSS library to spice up your navigation. The plugin offers lot of options to suit everyone's needs."
+                ],
+                "livePreview": "http://www.jozefbutko.com/stickyNavbar/",
+                "githubLink": "https://github.com/jbutko/stickyNavbar.js",
+                "projectDate": "March 2014",
+                "type": "PERSONAL PROJECT",
+                "tags": [
+                    "jQuery", "Open Source", "Design"
+                ],
+                "images": [],
+                "mainThumbnail": "stickynavbar.png",
+                "thumbs": [],
+                "classThumb": "mix grid_portfolio inline-block jquery opensource",
+                "services": [],
+                "features": []
+            },
+            {
+                "id": 2,
+                "CSSid": "sccd",
+                "titleH2": "www.sccd-sk.org",
+                "titleThumb": "sccd-sk.org",
+                "description": [
+                    "Small jQuery and CSS tweaks on the website of Slovak Centre for Communication and Development. Within the project there was implemented sliding menu with favourite links, hand motion with informative text and CSS cross-browser hacks for positioning of elements on a grid."
+                ],
+                "livePreview": "http://www.sccd-sk.org/en/uvod",
+                "githubLink": "https://gist.github.com/jbutko/8169054",
+                "projectDate": "November 2013",
+                "type": "FREELANCE",
+                "tags": [
+                    "CSS", "CSS3", "jQuery"
+                ],
+                "images": [
+                    "sccd01.png", "sccd02.png", "sccd03.png", "sccd04.png"
+                    ],
+                "mainThumbnail": "sccd230x230.png",
+                "thumbs": [
+                    "thumbs_sccd01.png", "thumbs_sccd02.png", "thumbs_sccd03.png", "thumbs_sccd04.png"
+                    ],
+                "classThumb": "mix grid_portfolio inline-block html css jquery",
+                "services": [
+                    "jQuery sliding menu",
+                    "hand movement animation with path jQuery plugin",
+                    "CSS cross-browser hacks to align elements exactly on a grid"
+                ],
+                "features": []
+
+            },
+            {
+                "id": 3,
+                "CSSid": "predators",
+                "titleH2": "The Predators: WordPress Theme",
+                "titleThumb": "Predators WP Theme",
+                "description": [
+                    "build with the help of undescores (_s) starter theme (undescores.me)",
+                    "960 grid system",
+                    "multi slider",
+                    "font awesome icons",
+                    "proper scripts and styles enqueueing through functions.php",
+                    "valid HTML5 code",
+                    "CSS3 magic",
+                    "twitter widget",
+                    "2 widgetable areas",
+                    "CCS3 roll-over hover effect",
+                    "jQuery tooltips",
+                    "source PSD: http://www.anotherwebstorm.com/projects/#/the-predators"
+                ],
+                "livePreview": "http://www.jozefbutko.com/?preview_theme=predators",
+                "githubLink": "http://github.com/jbutko/predators",
+                "projectDate": "August 2013",
+                "type": "PERSONAL PROJECT",
+                "tags": [
+                    "CSS", "CSS3", "HTML", "jQuery", "PHP", "WP"
+                ],
+                "images": [ "predators1.png", "predators2.png", "predators3.png" ],
+                "mainThumbnail": "Predators230x230.png",
+                "thumbs": [ "thumbs_predators1.png", "thumbs_predators2.png", "thumbs_predators3.png" ],
+                "classThumb": "mix grid_portfolio inline-block html css wp php",
+                "services": [],
+                "features": []
+
+            },
+            {
+                "id": 4,
+                "CSSid": "creativio",
+                "titleH2": "Creativio: Responsive Creative Portfolio WordPress Theme",
+                "titleThumb": "Creativio WP Theme",
+                "description": [
+                    "Creativio is responsive WordPress theme built over fantastic Bones framework which is suitable for agencies, freelancers or just an ordinary bloggers."
+                ],
+                "livePreview": "http://www.jozefbutko.com/?preview_theme=creativio",
+                "githubLink": "http://github.com/jbutko/creativio",
+                "projectDate": "September 2013",
+                "type": "PERSONAL PROJECT",
+                "tags": [
+                    "CSS", "CSS3", "HTML", "jQuery", "PHP", "WP", "Responsive"
+                ],
+                "images": [ "creativio1.png", "creativio2.png", "creativio3.png", "creativio4.png", "creativio5.png", "creativio6.png", "creativio7.png", "creativio8.png" ],
+                "mainThumbnail": "Creativio230x230.png",
+                "thumbs": [ "thumbs_creativio1.png", "thumbs_creativio2.png", "thumbs_creativio3.png", "thumbs_creativio4.png", "thumbs_creativio5.png", "thumbs_creativio6.png", "thumbs_creativio7.png", "thumbs_creativio8.png" ],
+                "classThumb": "mix grid_portfolio inline-block html css jquery wp php responsive",
+                "services": [],
+                "features": [
+                    "fully responsive",
+                    "4 slider in 1 (Meta Slider)",
+                    "filterable portfolio",
+                    "blog page template",
+                    "gallery page template (NextGEN Gallery)",
+                    "slick hover content effect on recent work & blog part",
+                    "working contact form (Contact Form 7)",
+                    "more than 350 Font Awesome icons: gives you scalable vector icons that can be customized"
+                ]
+            },
+            {
+                "id": 5,
+                "CSSid": "ninepin",
+                "titleH2": "Ninepin: WordPress Responsive Theme",
+                "titleThumb": "Ninepin WP Theme",
+                "description": [
+                    "Ninepin WordPress Responsive Theme",
+                    "built over Underscores starter theme (underscores.me)",
+                    "responsive design (with support for IE8 & lower using respond.js)",
+                    "HTML5 valid code",
+                    "IE7+ friendly",
+                    "dynamically-resized main background using backstretch jQuery plugin",
+                    "own design",
+                    "92/100 google page speed"
+                ],
+                "livePreview": "http://www.jozefbutko.com/?preview_theme=kolky",
+                "githubLink": "http://github.com/jbutko/kolky",
+                "projectDate": "June 2013",
+                "type": "PERSONAL PROJECT",
+                "tags": [
+                    "CSS", "CSS3", "Design", "HTML", "PHP", "WP", "Responsive"
+                ],
+                "images": [ "kolky1.png", "kolky2.png", "kolky3.png", "kolky4.png" ],
+                "mainThumbnail": "Kolky230x230.png",
+                "thumbs": [ "thumbs_kolky1.png", "thumbs_kolky2.png", "thumbs_kolky3.png", "thumbs_kolky4.png"  ],
+                "classThumb": "mix grid_portfolio inline-block html css wp php design responsive",
+                "services": [],
+                "features": []
+
+            },
+            {
+                "id": 6,
+                "CSSid": "lambda",
+                "titleH2": "Lambda: Multi Layout Responsive Tumblr Theme",
+                "titleThumb": "Lambda",
+                "description": [
+                    "Lambda is a responsive Tumblr theme with more than 60 customization options and 3 page layouts – one column, classic sidebar and 3 column masonry grid layout. You can easily turn on/off certain elements like Instagram, Flickr, Twitter, Dribbble or Logo widget."
+                ],
+                "livePreview": "https://creativemarket.com/jozefbutko/53178-Lambda-Multi-Layout-Tumblr-Theme",
+                "githubLink": "",
+                "projectDate": "June 2014",
+                "type": "PERSONAL PROJECT",
+                "tags": [
+                    "CSS", "CSS3", "HTML", "jQuery", "Themes", "Tumblr", "Responsive"
+                ],
+                "images": [ "02_preview2.jpg", "04_preview4.jpg", "10_closeup.jpg", "lambda-one-column.png", "lambda-preview-cm.jpg" ],
+                "mainThumbnail": "lambda.jpg",
+                "thumbs": [ "thumbs_02_preview2.jpg", "thumbs_04_preview4.jpg", "thumbs_10_closeup.jpg", "thumbs_lambda-one-column.png", "thumbs_lambda-preview-cm.jpg" ],
+                "classThumb": "mix grid_portfolio inline-block html css jquery responsive tumblr",
+                "services": [],
+                "features": [
+                    "3 fully responsive layouts",
+                    "Infinite scrolling support",
+                    "More than 60 customization options",
+                    "Google fonts & analytics support",
+                    "All post types support including responsive hi-res photoset and panorama",
+                    "7 widgets: Instagram, Dribbble, Flickr, Twitter, Logo widget, Tumblr Icons, About",
+                    "Integrated social sharing on Facebook, Twitter, Pinterest",
+                    "Disqus comments support",
+                    "Colors, font size and page background customization",
+                    "Slide down navigation menu",
+                    "Notes, Ask, Submit, Random, Archive, RSS, Reblog support and many more..."
+                ]
+            },
+            {
+                "id": 7,
+                "CSSid": "minima",
+                "titleH2": "Minima: WordPress Theme",
+                "titleThumb": "Minima WP Theme",
+                "description": [
+                    "simple wordpress portfolio template built over Underscores (_s) starter theme (underscores.me)",
+                    "responsive layout with IE8 and lower support using respond.js",
+                    "960gs grid layout",
+                    "source PSD: http://designerfirst.com/psd-templates/minima-free-psd-template/"
+                ],
+                "livePreview": "http://www.jozefbutko.com/?preview_theme=minima",
+                "githubLink": "http://github.com/jbutko/minima",
+                "projectDate": "August 2013",
+                "type": "PERSONAL PROJECT",
+                "tags": [
+                    "CSS", "HTML", "PHP", "Themes", "WP", "Responsive"
+                ],
+                "images": [ "minima01.png", "minima02.png", "minima03.png", "minima04.png", "minima05.png", "minima06.png", "minima07.png" ],
+                "mainThumbnail": "Minima230x230.png",
+                "thumbs": [ "thumbs_minima01.png", "thumbs_minima02.png", "thumbs_minima03.png", "thumbs_minima04.png", "thumbs_minima05.png", "thumbs_minima06.png", "thumbs_minima07.png" ],
+                "classThumb": "mix grid_portfolio inline-block html css wp php responsive",
+                "services": [],
+                "features": []
+            },
+            {
+                "id": 8,
+                "CSSid": "miavydavatelstvo",
+                "titleH2": "MiaVydavatelstvo",
+                "titleThumb": "MiaVydavatelstvo",
+                "description": [
+                    "transformation of PSD design mockup into responsive HTML template",
+                    "valid HTML",
+                    "cross-browser compatible (IE9+)",
+                    "Masonry layout"
+                ],
+                "livePreview": "http://miavydavatelstvo.wame.sk/",
+                "githubLink": "",
+                "projectDate": "August 2014",
+                "type": "FREELANCE",
+                "tags": [
+                    "CSS", "HTML", "Responsive", "jQuery"
+                ],
+                "images": [ "mia01.png", "mia02.png", "mia03.png", "mia04.png", "mia05.png" ],
+                "mainThumbnail": "mia-thumb.png",
+                "thumbs": [ "thumbs_mia01.png", "thumbs_mia02.png", "thumbs_mia03.png", "thumbs_mia04.png", "thumbs_mia05.png" ],
+                "classThumb": "mix grid_portfolio inline-block html css responsive jquery freelance",
+                "services": [],
+                "features": []
+
+            },
+            {
+                "id": 9,
+                "CSSid": "pivodamian",
+                "titleH2": "www.pivodamian.sk",
+                "titleThumb": "www.pivodamian.sk",
+                "description": [
+                    "Freelance work for Slovak alternative beer wholesale bringing the most interesting beers from world of craft breweries. This one was initial page design which should transform later in fully working website with e-commerce support."
+                ],
+                "livePreview": "http://www.pivodamian.sk/",
+                "githubLink": "http://github.com/jbutko/pivodamian",
+                "projectDate": "June 2014",
+                "type": "FREELANCE",
+                "tags": [
+                    "CSS", "CSS3", "HTML", "Responsive"
+                ],
+                "images": [ "detail.png", "full-site.png", "ipad.png", "iphone.png" ],
+                "mainThumbnail": "damian.png",
+                "thumbs": [ "thumbs_detail.png", "thumbs_full-site.png", "thumbs_ipad.png", "thumbs_iphone.png" ],
+                "classThumb": "mix grid_portfolio inline-block html css responsive freelance",
+                "services": [],
+                "features": []
+            }
+        ]
+    },
+    "tags": [
+        "All",
+        "HTML",
+        "CSS",
+        "jQuery",
+        "WP",
+        "PHP",
+        "Design",
+        "Responsive",
+        "Tumblr",
+        "Open Source"
+    ]
+}
